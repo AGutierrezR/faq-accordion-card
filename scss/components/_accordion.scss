@@ -1,0 +1,61 @@
+@use '../abstracts/' as *;
+
+.accordion {
+  &__trigger {
+    @include bottom-reset();
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 1rem;
+    position: relative;
+    text-align: left;
+    line-height: 1.65;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  &__title {
+    font-family: var(--ff-primary);
+    color: var(--clr-darkergrayishblue);
+    transition: 0.4s ease;
+
+    &:hover {
+      color: var(--clr-softred);
+      transition: 0.4s ease;
+    }
+  }
+
+  &__icon {
+    content: url(../images/icon-arrow-down.svg);
+    transition: transform 0.4s ease;
+  }
+
+  &__body {
+    color: var(--clr-darkgrayishblue);
+    margin-bottom: 10px;
+    animation: slideDown 0.5s forwards;
+  }
+
+  // ------------
+  // STATES
+  // ------------
+
+  &__trigger[aria-expanded='true'] &__title {
+    font-weight: var(--fw-bold);
+  }
+
+  &__trigger[aria-expanded='true'] &__icon {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+  }
+}
