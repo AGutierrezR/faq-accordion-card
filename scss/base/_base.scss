@@ -6,14 +6,5 @@ body {
   align-items: center;
 
   min-height: 100vh;
-  // background-image: url(../images/pattern-background-mobile.svg);
-  // background-repeat: no-repeat;
-  // background-size: 100%;
-  // background-color: var(--clr-paleblue);
-
-  // @include media-breakpoint('desktop') {
-  //   background-image: url(../images/pattern-background-desktop.svg);
-  //   background-size: 100%;
-  //   background-color: var(--clr-paleblue);
-  // }
+  background-image: linear-gradient(var(--clr-softviolet), var(--clr-softblue));
 }

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+:root {
+  --clr-darkerdesaturatedblue: #1d1e35;
+  --clr-softred: #f47c57;
+  --clr-softviolet: #af67e9;
+  --clr-softblue: #6565e7;
+  --clr-darkergrayishblue: #4a4b5e;
+  --clr-darkhgrayishblue: #787887;
+  --clr-lightgrayishblue: #e7e7e9;
+  --clr-white: white;
+  /* Fonts Families */
+  --ff-primary: 'Kumbh Sans', sans-serif;
+  /* Fonts Sizes */
+  --fs-title: 1.325rem;
+  --fs-body: 0.75rem;
+  /* Fonts Weight */
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+@media only screen and (min-width: 1440px) {
+  :root {
+    --fs-title: 1.75rem;
+    --fs-body: 1rem;
+  }
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: var(--fs-title);
+  font-weight: var(--fw-black);
+  margin-bottom: 0.75em;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+/*# sourceMappingURL=main.css.map */
