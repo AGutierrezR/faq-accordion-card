@@ -1,0 +1,31 @@
+@use '../abstracts/' as *;
+
+:root {
+  @each $_, $shade in $colors {
+    @each $color, $value in $shade {
+      --clr-#{"" + $color}: #{$value};
+    }
+  }
+  /* Fonts Families */
+  --ff-primary: 'Kumbh Sans', sans-serif;
+
+  /* Fonts Sizes */
+  @each $screen-size, $property in $type-scale {
+    @if ($screen-size == mobile) {
+      @each $prop, $value in $property {
+        --fs-#{$prop}: #{$value};
+      }
+    } @else {
+      @include media-breakpoint(#{$screen-size}) {
+        @each $prop, $value in $property {
+          --fs-#{$prop}: #{$value};
+        }
+      }
+    }
+  }
+
+  /* Fonts Weight */
+  @each $style, $value in $type-weight {
+    --fw-#{$style}: #{$value};
+  }
+}
