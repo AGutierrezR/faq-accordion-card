@@ -5,11 +5,12 @@
 body {
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
+  color: var(--clr-darkerdesaturatedblue);
   line-height: 1.6;
 }
 
 h1 {
   font-size: var(--fs-title);
   font-weight: var(--fw-black);
-  margin-bottom: 0.75em;
+  margin-bottom: 0.565em;
 }
