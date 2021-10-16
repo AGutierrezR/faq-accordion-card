@@ -17,12 +17,6 @@
   &__title {
     font-family: var(--ff-primary);
     color: var(--clr-darkergrayishblue);
-    transition: 0.4s ease;
-
-    &:hover {
-      color: var(--clr-softred);
-      transition: 0.4s ease;
-    }
   }
 
   &__icon {
@@ -34,11 +28,19 @@
     color: var(--clr-darkgrayishblue);
     margin-bottom: 10px;
     animation: slideDown 0.5s forwards;
+
+    &--closing {
+      animation: slideUp 0.5s forwards;
+    }
   }
 
   // ------------
   // STATES
   // ------------
+  &__trigger:hover &__title {
+    color: var(--clr-softred);
+    transition: 0.4s ease;
+  }
 
   &__trigger[aria-expanded='true'] &__title {
     font-weight: var(--fw-bold);
@@ -46,16 +48,5 @@
 
   &__trigger[aria-expanded='true'] &__icon {
     transform: rotate(-180deg);
-  }
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    max-height: 0;
-  }
-  to {
-    opacity: 1;
-    max-height: 200px;
   }
 }
