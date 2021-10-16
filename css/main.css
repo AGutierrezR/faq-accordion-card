@@ -89,7 +89,7 @@ th {
   /* Fonts Families */
   --ff-primary: 'Kumbh Sans', sans-serif;
   /* Fonts Sizes */
-  --fs-title: 1.325rem;
+  --fs-title: 1.75rem;
   --fs-body: 0.75rem;
   /* Fonts Weight */
   --fw-regular: 400;
@@ -147,12 +147,15 @@ body {
   }
 }
 .faq-card {
-  width: 80%;
+  width: 85%;
   position: relative;
   background-color: white;
+  padding: 40px 25px;
+  border-radius: 20px;
 }
 .faq-card__title {
   text-align: center;
+  font-weight: var(--fw-bold);
 }
 
 .accordion__trigger {
@@ -169,10 +172,11 @@ body {
   text-align: left;
   line-height: 1.65;
   width: 100%;
-  margin: 10px 0;
+  padding: 5px 0;
 }
 .accordion__title {
   font-family: var(--ff-primary);
+  font-size: 0.8125em;
   color: var(--clr-darkergrayishblue);
 }
 .accordion__icon {
@@ -182,6 +186,7 @@ body {
 .accordion__body {
   color: var(--clr-darkgrayishblue);
   margin-bottom: 10px;
+  max-width: 38ch;
   animation: slideDown 0.5s forwards;
 }
 .accordion__body--closing {

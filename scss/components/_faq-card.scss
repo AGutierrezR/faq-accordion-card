@@ -1,0 +1,12 @@
+.faq-card {
+  width: 85%;
+  position: relative;
+  background-color: white;
+  padding: 40px 25px;
+  border-radius: 20px;
+
+  &__title {
+    text-align: center;
+    font-weight: var(--fw-bold);
+  }
+}

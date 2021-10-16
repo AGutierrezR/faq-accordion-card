@@ -11,11 +11,12 @@
     text-align: left;
     line-height: 1.65;
     width: 100%;
-    margin: 10px 0;
+    padding: 5px 0;
   }
 
   &__title {
     font-family: var(--ff-primary);
+    font-size: 0.8125em;
     color: var(--clr-darkergrayishblue);
   }
 
@@ -27,6 +28,7 @@
   &__body {
     color: var(--clr-darkgrayishblue);
     margin-bottom: 10px;
+    max-width: 38ch;
     animation: slideDown 0.5s forwards;
 
     &--closing {
