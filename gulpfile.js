@@ -26,6 +26,7 @@ const browserSyncReload = (cb) => {
 
 const watchTask = () => {
   watch('./index.html', browserSyncReload)
+  watch('./js/app.js', browserSyncReload)
   watch('./scss/**/*.scss', scssTask)
 }
 
