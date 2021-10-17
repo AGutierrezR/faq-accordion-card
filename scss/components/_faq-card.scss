@@ -53,6 +53,9 @@
     padding: 0 25px 40px;
   }
 
+  // ------------
+  // MEDIA QUERIES
+  // ------------
   @include media-breakpoint('desktop') {
     display: grid;
     grid-template-columns: 476px 1fr;

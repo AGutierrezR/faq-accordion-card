@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
@@ -87,7 +87,7 @@ th {
   --clr-lightgrayishblue: #e7e7e9;
   --clr-white: white;
   /* Fonts Families */
-  --ff-primary: 'Kumbh Sans', sans-serif;
+  --ff-primary: "Kumbh Sans", sans-serif;
   /* Fonts Sizes */
   --fs-title: 2rem;
   --fs-body: 0.75rem;
@@ -272,10 +272,10 @@ body {
   color: var(--clr-softred);
   transition: 0.4s ease;
 }
-.accordion__trigger[aria-expanded='true'] .accordion__title {
+.accordion__trigger[aria-expanded=true] .accordion__title {
   font-weight: var(--fw-bold);
 }
-.accordion__trigger[aria-expanded='true'] .accordion__icon {
+.accordion__trigger[aria-expanded=true] .accordion__icon {
   transform: rotate(-180deg);
 }
 @media only screen and (min-width: 1440px) {
