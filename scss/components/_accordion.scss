@@ -52,4 +52,19 @@
   &__trigger[aria-expanded='true'] &__icon {
     transform: rotate(-180deg);
   }
+
+  // ------------
+  // MEDIA QUERIES
+  // ------------
+  @include media-breakpoint('desktop') {
+    &__trigger {
+      font-size: 1.1rem;
+      padding-right: 12px;
+    }
+
+    &__body {
+      max-width: none;
+      margin-bottom: 15px;
+    }
+  }
 }
