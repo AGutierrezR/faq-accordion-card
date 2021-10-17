@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
@@ -87,7 +87,7 @@ th {
   --clr-lightgrayishblue: #e7e7e9;
   --clr-white: white;
   /* Fonts Families */
-  --ff-primary: "Kumbh Sans", sans-serif;
+  --ff-primary: 'Kumbh Sans', sans-serif;
   /* Fonts Sizes */
   --fs-title: 2rem;
   --fs-body: 0.75rem;
@@ -120,18 +120,6 @@ body {
   min-height: 100vh;
   background-image: linear-gradient(var(--clr-softviolet), var(--clr-softblue));
 }
-body::before {
-  content: "";
-  background-image: url(../design/desktop-design.jpg);
-  background-position: center;
-  background-size: contain;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.2;
-}
 
 @keyframes slideDown {
   from {
@@ -161,7 +149,6 @@ body::before {
   background-color: var(--clr-white);
   padding: 0 25px 40px;
   border-radius: 20px;
-  margin-left: 280px;
 }
 .faq-card__title {
   text-align: center;
@@ -171,10 +158,10 @@ body::before {
 }
 @media only screen and (min-width: 1440px) {
   .faq-card {
-    max-width: 920px;
     display: grid;
     grid-template-columns: 476px 1fr;
     padding: 65px 96px 65px 0;
+    max-width: 920px;
     background-image: url(../images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -190,15 +177,29 @@ body::before {
   height: 110px;
   margin-bottom: 18px;
 }
-.illustration picture {
+.illustration-box {
   position: absolute;
+  z-index: 1;
+  display: none;
+}
+.illustration picture {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
   z-index: 0;
+}
+.illustration picture img {
+  display: block;
+  position: absolute;
+  top: -98%;
+  left: -10px;
 }
 .illustration picture::after {
   content: url(../images/bg-pattern-mobile.svg);
   position: absolute;
-  right: 0px;
-  bottom: -15px;
+  right: 16px;
+  bottom: 0;
 }
 @media only screen and (min-width: 1440px) {
   .illustration {
@@ -206,8 +207,7 @@ body::before {
     margin-bottom: 0;
   }
   .illustration-box {
-    position: absolute;
-    z-index: 1;
+    display: block;
     left: -92px;
     top: 138px;
   }
@@ -268,10 +268,10 @@ body::before {
   color: var(--clr-softred);
   transition: 0.4s ease;
 }
-.accordion__trigger[aria-expanded=true] .accordion__title {
+.accordion__trigger[aria-expanded='true'] .accordion__title {
   font-weight: var(--fw-bold);
 }
-.accordion__trigger[aria-expanded=true] .accordion__icon {
+.accordion__trigger[aria-expanded='true'] .accordion__icon {
   transform: rotate(-180deg);
 }
 @media only screen and (min-width: 1440px) {
