@@ -1,17 +1,36 @@
+@use '../abstracts' as *;
+
 .faq-card {
   width: 100%;
   max-width: 325px;
   margin: 0 auto;
   position: relative;
   background-color: var(--clr-white);
+  // border: 1px solid black;
   padding: 0 25px 40px;
   border-radius: 20px;
+  margin-left: 280px;
 
   &__title {
     text-align: center;
     font-weight: var(--fw-bold);
     line-height: 1;
     margin-bottom: 28px;
+  }
+
+  @include media-breakpoint('desktop') {
+    max-width: 920px;
+    display: grid;
+    grid-template-columns: 476px 1fr;
+    padding: 65px 96px 65px 0;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: -534px -264px;
+
+    &__title {
+      text-align: left;
+    }
   }
 }
 
@@ -22,14 +41,46 @@
 
   picture {
     position: absolute;
-    top: -98%;
-    left: -10px;
+    // top: -98%;
+    // left: -10px;
+    z-index: 0;
 
     &::after {
       content: url(../images/bg-pattern-mobile.svg);
       position: absolute;
       right: 0px;
       bottom: -15px;
+    }
+  }
+
+  @include media-breakpoint('desktop') {
+    height: 100%;
+    margin-bottom: 0;
+
+    &-box {
+      position: absolute;
+      z-index: 1;
+      left: -92px;
+      top: 138px;
+    }
+
+    picture {
+      display: block;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+
+      &::after {
+        content: unset;
+        position: unset;
+      }
+    }
+
+    picture img {
+      position: absolute;
+      left: -85px;
+      top: 5px;
     }
   }
 }
