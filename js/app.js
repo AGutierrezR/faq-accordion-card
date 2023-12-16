@@ -21,13 +21,14 @@ function handleAccordionClick() {
 
   this.setAttribute('aria-expanded', 'false')
   accordionBody.classList.add('accordion__body--closing')
-  accordionBody.addEventListener('animationend', handleHideAfterAnimation)
+  accordionBody.addEventListener('animationend', handleHideAfterAnimation, {
+    once: true,
+  })
 }
 
 function handleHideAfterAnimation() {
   this.setAttribute('hidden', '')
   this.classList.remove('accordion__body--closing')
-  this.removeEventListener('animationend', handleHideAfterAnimation)
 }
 
 initAccordion()
